@@ -1,0 +1,40 @@
+# Daily schedule commit. GitHub cron is best-effort and can start late;
+# the job itself enforces the timing rules and skips cleanly when beyond
+# the window, so a delayed runner can never corrupt the record.
+name: commit-job
+
+on:
+  schedule:
+    - cron: "0 21 * * *" # 21:00 UTC, comfortably after ERCOT DAM publication year-round
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-jobs # never let two jobs push at once
+  cancel-in-progress: false
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: solve and write tomorrow's schedule
+        run: python -m src.commit_job
+      - name: publish the commit file
+        run: |
+          git config user.name "vbatt-bot"
+          git config user.email "vbatt-bot@users.noreply.github.com"
+          git add data/commits
+          if git diff --cached --quiet; then
+            echo "no new schedule to publish (skip or already committed)"
+          else
+            git commit -m "Schedule commit $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
