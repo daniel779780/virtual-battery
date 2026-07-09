@@ -1,0 +1,28 @@
+# Simulated asset and operation settings. Nothing about the asset is hardcoded in src/.
+# CHECKPOINT 1: Daniel reviews and signs off on these values before the first committed schedule.
+
+asset:
+  power_mw: 100            # max charge and discharge rate
+  energy_mwh: 200          # 2-hour duration, the ERCOT-typical spec
+  round_trip_efficiency: 0.90   # applied on the charge leg: storing 1 MWh costs 1/0.9 MWh bought... see optimize.py for the exact convention
+  soc_start_mwh: 0         # battery starts each operating day empty
+  soc_end_mwh: 0           # and must end empty
+  max_cycles_per_day: 1    # discharge throughput cap = max_cycles * energy_mwh
+  throughput_cost_usd_per_mwh: 0   # degradation cost, zero in v1
+
+market:
+  iso: ERCOT
+  hub: HB_NORTH            # settlement point; a hub is an average of many nodes, less noisy than any single node
+  location_type: "Trading Hub"
+  dam_market: DAY_AHEAD_HOURLY       # gridstatus market name, verified against gridstatus 0.36.0
+  rt_market: REAL_TIME_15_MIN        # ERCOT settles real-time in 15-minute intervals (96/day)
+  timezone: US/Central     # ERCOT operating-day clock; all stored timestamps are UTC
+
+jobs:
+  commit_run_utc: "21:00"  # after DAM publication (~13:30 CT); 21:00 UTC = 15:00 CDT / 16:00 CST, safe year-round
+  commit_late_window_hours: 5   # if the job starts later than this past the scheduled time, SKIP, never backfill
+  retries: 3
+  retry_backoff_seconds: 60
+
+solver:
+  name: HIGHS              # open-source LP solver, via cvxpy
