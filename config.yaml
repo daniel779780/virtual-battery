@@ -21,6 +21,8 @@ market:
 jobs:
   commit_run_utc: "21:00"  # after DAM publication (~13:30 CT); 21:00 UTC = 15:00 CDT / 16:00 CST, safe year-round
   commit_late_window_hours: 5   # if the job starts later than this past the scheduled time, SKIP, never backfill
+  settle_run_utc: "09:00"  # 03:00/04:00 CT, hours after the operating day closes, RT prices fully posted
+  ledger_start_date: "2026-07-10"   # first scheduled operating day; earlier days are pre-launch, not SKIPs
   retries: 3
   retry_backoff_seconds: 60
 

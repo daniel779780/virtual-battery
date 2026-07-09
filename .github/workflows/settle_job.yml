@@ -1,0 +1,39 @@
+# Daily settlement. Idempotent: days already in the ledger are never touched,
+# and a failed real-time pull leaves the day pending for tomorrow's retry.
+name: settle-job
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # 03:00/04:00 Central, hours after the operating day closes
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-jobs # shares a lock with commit-job so pushes never collide
+  cancel-in-progress: false
+
+jobs:
+  settle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: settle completed operating days
+        run: python -m src.settle_job
+      - name: publish ledger rows
+        run: |
+          git config user.name "vbatt-bot"
+          git config user.email "vbatt-bot@users.noreply.github.com"
+          git add data/ledger.csv
+          if git diff --cached --quiet; then
+            echo "no new settlements"
+          else
+            git commit -m "Settlement $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
