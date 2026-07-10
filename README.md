@@ -50,4 +50,4 @@ Independent research and simulation. Not investment advice. Unaffiliated with an
 
 ---
 
-Repository guide: [docs/project_context.pdf](docs/project_context.pdf) is the original context document this README is drawn from. Committed schedules live in `data/commits/`, one JSON per operating day, and settled results in `data/ledger.csv`, both append-only.
+Repository guide: [DESIGN.md](DESIGN.md) specifies the asset, the optimization, the integrity rules, and the architecture. [docs/project_context.pdf](docs/project_context.pdf) is the original context document this README is drawn from. Committed schedules live in `data/commits/`, one JSON per operating day, and settled results in `data/ledger.csv`, both append-only.
