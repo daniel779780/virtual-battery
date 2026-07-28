@@ -1,0 +1,187 @@
+{
+  "asset": {
+    "energy_mwh": 200,
+    "max_cycles_per_day": 1,
+    "power_mw": 100,
+    "round_trip_efficiency": 0.9,
+    "soc_end_mwh": 0,
+    "soc_start_mwh": 0,
+    "throughput_cost_usd_per_mwh": 0
+  },
+  "expected_dam_pnl_usd": 9243.44,
+  "generated_at_utc": "2026-07-28T21:53:15.162777+00:00",
+  "hours": [
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 27.86,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T05:00:00+00:00",
+      "soc_end_mwh": 0.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 25.49,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T06:00:00+00:00",
+      "soc_end_mwh": 0.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 24.24,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T07:00:00+00:00",
+      "soc_end_mwh": 0.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 24.07,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T08:00:00+00:00",
+      "soc_end_mwh": 0.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 25.02,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T09:00:00+00:00",
+      "soc_end_mwh": 0.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 27.46,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T10:00:00+00:00",
+      "soc_end_mwh": 0.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 29.61,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T11:00:00+00:00",
+      "soc_end_mwh": 0.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 26.56,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T12:00:00+00:00",
+      "soc_end_mwh": 0.0
+    },
+    {
+      "charge_mw": 100.0,
+      "dam_price_usd_per_mwh": 20.6,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T13:00:00+00:00",
+      "soc_end_mwh": 90.0
+    },
+    {
+      "charge_mw": 100.0,
+      "dam_price_usd_per_mwh": 20.96,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T14:00:00+00:00",
+      "soc_end_mwh": 180.0
+    },
+    {
+      "charge_mw": 22.222,
+      "dam_price_usd_per_mwh": 22.39,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T15:00:00+00:00",
+      "soc_end_mwh": 200.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 25.38,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T16:00:00+00:00",
+      "soc_end_mwh": 200.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 29.27,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T17:00:00+00:00",
+      "soc_end_mwh": 200.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 33.24,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T18:00:00+00:00",
+      "soc_end_mwh": 200.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 33.33,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T19:00:00+00:00",
+      "soc_end_mwh": 200.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 35.09,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T20:00:00+00:00",
+      "soc_end_mwh": 200.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 34.6,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T21:00:00+00:00",
+      "soc_end_mwh": 200.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 33.52,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T22:00:00+00:00",
+      "soc_end_mwh": 200.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 43.87,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-29T23:00:00+00:00",
+      "soc_end_mwh": 200.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 65.24,
+      "discharge_mw": 100.0,
+      "interval_start_utc": "2026-07-30T00:00:00+00:00",
+      "soc_end_mwh": 100.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 73.73,
+      "discharge_mw": 100.0,
+      "interval_start_utc": "2026-07-30T01:00:00+00:00",
+      "soc_end_mwh": 0.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 64.61,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-30T02:00:00+00:00",
+      "soc_end_mwh": 0.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 46.76,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-30T03:00:00+00:00",
+      "soc_end_mwh": 0.0
+    },
+    {
+      "charge_mw": 0.0,
+      "dam_price_usd_per_mwh": 34.19,
+      "discharge_mw": 0.0,
+      "interval_start_utc": "2026-07-30T04:00:00+00:00",
+      "soc_end_mwh": 0.0
+    }
+  ],
+  "hub": "HB_NORTH",
+  "operating_date": "2026-07-29",
+  "schedule_source": "lp",
+  "solver_status": "optimal"
+}
