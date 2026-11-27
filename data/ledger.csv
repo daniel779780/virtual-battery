@@ -136,3 +136,4 @@ operating_date,commit_timestamp_utc,schedule_source,dam_pnl_usd,rt_settled_pnl_u
 2026-11-23,2026-11-23T01:11:22.888906+00:00,lp,5384.34,5636.64,6157.39,0.8745,53.84,29.61,1.0,SETTLED,
 2026-11-24,,,,,,,,,,SKIP,no committed schedule; day passed without a commit
 2026-11-25,,,,,,,,,,SKIP,no committed schedule; day passed without a commit
+2026-11-26,,,,,,,,,,SKIP,no committed schedule; day passed without a commit
